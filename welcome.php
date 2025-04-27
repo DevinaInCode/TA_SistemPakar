@@ -9,6 +9,8 @@
 
 <body>
   <h1 class="text-center">SELAMAT DATANG</h1>
+  <h1 class="text-center">Sistem Pakar Diagnosa dan Rekomendasi Obat Infeksi Parasit pada Kucing Dewasa</h1>
+  <h1 class="text-center">DiagnoCat</h1>
 </body>
 
 </html>
