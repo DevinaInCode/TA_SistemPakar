@@ -12,6 +12,10 @@ include "config.php";
   <title>Sistem Pakar Kelompok 4</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Bootstrap Table -->
+  <link rel="stylesheet" href="assets/css/datatables.min.css">
+  <!-- Font Awesome 5  -->
+  <link rel="stylesheet" href="assets/css/all.css">
 </head>
 
 <body>
@@ -58,13 +62,13 @@ include "config.php";
       include "welcome.php";
     } elseif ($page == "gejala") {
       if ($action == "") {
-        include "tampil_gejala.php";
-      } elseif ($action == "NAMA_ACTION") {
-        include "NAMA_HALAMAN";
-      } elseif ($action == "NAMA_ACTION") {
-        include "NAMA_HALAMAN";
+        include "view_gejala.php";
+      } elseif ($action == "tambah") {
+        include "add_gejala.php";
+      } elseif ($action == "update") {
+        include "update_gejala.php";
       } else {
-        include "NAMA_HALAMAN";
+        include "del_gejala.php";
       }
     } else {
       include "NAMA_HALAMAN";
@@ -73,9 +77,22 @@ include "config.php";
   </div>
 
   <!-- jquery -->
-  <link rel="stylesheet" href="assets/js/jquery-3.7.0.min.js">
+  <script src="assets/js/jquery-3.7.0.min.js"></script>
   <!-- Bootstrap js -->
-  <link rel="stylesheet" href="assets/js/bootstrap.min.js">
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Datatables js -->
+  <script src="assets/js/datatables.min.js"></script>
+  <!-- Font Awesome 5 -->
+  <script src="assets/js/all.js"></script>
+
+
+
+  <!-- Script js -->
+  <script>
+    $(document).ready(function() {
+      $('#ourTable').DataTable();
+    });
+  </script>
 </body>
 
 </html>
