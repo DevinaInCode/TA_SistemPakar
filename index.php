@@ -27,19 +27,19 @@ include "config.php";
           <a class="nav-link active" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?page=gejala">Gejala</a>
+          <a class="nav-link active" href="?page=gejala">Gejala</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?page=penyakit">Penyakit</a>
+          <a class="nav-link active" href="?page=penyakit">Penyakit</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Basis Aturan</a>
+          <a class="nav-link active" href="?page=bAturan">Basis Pengetahuan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Konsultasi</a>
+          <a class="nav-link active" href="?page=konsul">Konsultasi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Logout</a>
+          <a class="nav-link active" href="#">Logout</a>
         </li>
       </ul>
     </div>
@@ -66,7 +66,7 @@ include "config.php";
       } elseif ($action == "tambah") {
         include "add_gejala.php";
       } elseif ($action == "update") {
-        include "update_gejala.php";
+        include "upd_gejala.php";
       } else {
         include "del_gejala.php";
       }
@@ -80,8 +80,28 @@ include "config.php";
       } else {
         include "del_penyakit.php";
       }
+    } elseif ($page == "bAturan") {
+      if ($action == "") {
+        include "view_bAturan.php";
+      } elseif ($action == "tambah") {
+        include "add_bAturan.php";
+      } elseif ($action == "update") {
+        include "upd_bAturan.php";
+      } else {
+        include "del_bAturan.php";
+      }
+    } elseif ($page == "konsul") {
+      if ($action == "") {
+        include "view_konsul.php";
+      } elseif ($action == "proses") {
+        include "proses_konsul.php";
+      } elseif ($action == "riwayat") {
+        include "riwayat_konsul.php";
+      } else {
+        include "del_konsul.php";
+      }
     } else {
-      include "NAMA_HALAMAN";
+      // include "rules";
     }
     ?>
   </div>

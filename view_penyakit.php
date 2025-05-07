@@ -24,10 +24,13 @@
       <table class="table table-bordered" id="ourTable">
         <thead>
           <tr>
-            <th width="40px">No.</th>
-            <th width="100px">Kode Penyakit</th>
-            <th width="500px">Nama Penyakit</th>
-            <th width="150px">Opsi</th>
+            <th width="20px">No.</th>
+            <th width="50px">Kode Penyakit</th>
+            <th width="80px">Nama Penyakit</th>
+            <th width="300px">Definisi</th>
+            <th width="300px">Solusi</th>
+            <th width="300px">Rekomendasi Obat</th>
+            <th width="200px">Opsi</th>
           </tr>
         </thead>
         <tbody>
@@ -40,15 +43,15 @@
               <td><?php echo $row['id']; ?></td>
               <td><?php echo $row['kdPenyakit']; ?></td>
               <td><?php echo $row['nmPenyakit']; ?></td>
-              <td><?php echo $row['deskripsi']; ?></td>
+              <td><?php echo $row['definisi']; ?></td>
+              <td><?php echo $row['solusi']; ?></td>
               <td><?php echo $row['rek_obat']; ?></td>
               <td align="center">
-                <a class="btn btn-warning" href="?page=penyakit&action=update&id_penyakit=
-                <?php echo $row['id']; ?>">
+                <a class="btn btn-warning" href="?page=penyakit&action=update&id=<?php echo $row['id']; ?>">
                   <i class="fas fa-edit"></i>
                 </a>
                 <a onclick="return confirm('Yakin menghapus data ini ?')" class="btn btn-danger"
-                  href="?page=penyakit&action=hapus&id_penyakit=<?php echo $row['id_penyakit']; ?>">
+                  href="?page=penyakit&action=hapus&id=<?php echo $row['id']; ?>">
                   <i class="fas fa-trash"></i>
                 </a>
               </td>
